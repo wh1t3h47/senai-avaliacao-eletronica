@@ -1,5 +1,5 @@
 #include <stdexcept>
-#include "portas.h"
+#include "portas.hpp"
 using namespace std;
 
 void testar_porta_and() {

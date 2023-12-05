@@ -1,1 +1,0 @@
-void testar_todas_portas();

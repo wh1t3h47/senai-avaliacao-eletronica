@@ -15,6 +15,3 @@ bool porta_nand(bool entrada_a, bool entrada_b) {
 bool porta_not(bool entrada_a) {
     return !entrada_a;
 }
-
-
-
