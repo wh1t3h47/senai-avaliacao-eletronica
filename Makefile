@@ -28,9 +28,6 @@ OBJECTS_WINDOWS = $(OTHER_OBJECTS)
 $(OBJECTS_FOLDER)/%.o: $(SOURCE_FOLDER)/%.cpp
 	$(CXX) $(CFLAGS) -c -o $@ $<
 
-# Regra de compilação padrão
-all: $(EXECUTABLE)
-
 # Regra de construção do executável
 $(EXECUTABLE): $(OBJECTS_LINUX)
 	$(CXX) $(CFLAGS) -o $@ $(OBJECTS_LINUX) $(LDFLAGS)
@@ -44,6 +41,9 @@ windows: $(EXECUTABLE).exe
 # Regra de construção do executável para o ambiente Windows
 $(EXECUTABLE).exe: $(OBJECTS_WINDOWS)
 	$(CXX) $(CFLAGS) -o $@ $(OBJECTS_WINDOWS) $(LDFLAGS)
+
+# Regra de compilação padrão
+all: $(EXECUTABLE)
 
 clean:
 	rm -f $(EXECUTABLE) $(EXECUTABLE).exe $(OBJECTS_LINUX) $(OBJECTS_WINDOWS)
